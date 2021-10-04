@@ -88,7 +88,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: rgb(43, 34, 36);
 }
 .navbar .max-width{
     display: flex;
@@ -164,15 +164,30 @@ section .title::after{
 
 /* home section styling */
 .home{
-    display: flex;
-    background: url("images/bnr.jpeg") no-repeat center;
-    height: 100vh;
-    color: #fff;
-    min-height: 500px;
+    -webkit-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #6e6961, #23a6d5, #000000);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
     font-family: 'Ubuntu', sans-serif;
 }
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 .home .max-width{
   width: 100%;
   display: flex;
@@ -212,6 +227,7 @@ section .title::after{
     color: crimson;
     background: none;
 }
+
 
 /* about section styling */
 .about .title::after{
@@ -678,3 +694,4 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+
